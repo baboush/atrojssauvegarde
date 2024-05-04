@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { LinkComponent } from "../components/Link";
+import { LogoComponent } from "../components/Logo";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <img class="svg-one" src="/logo/Vector 3.svg" alt="" />
+    <nav class="nav">
+      <LinkComponent link="/" url="HOME" />
+      <LinkComponent link="/works" url="WORKS" />
+      <LinkComponent link="#" url="ABOUT" />
+      <LinkComponent link="#" url="CONTACT" />
+    </nav>
+    <button class="btn">test</button>
+    <div class="block-logo">
+      <LogoComponent url="logo/logo.svg" alt="logo" />
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    height: 100vh;
+  }
+
+  .nav {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .svg-one {
+    height: 100vh;
+  }
+</style>
